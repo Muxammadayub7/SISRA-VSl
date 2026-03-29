@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const e = document.querySelectorAll(".hero__button"),
+  const e = document.querySelectorAll(".registerBtn"),
     t = document.getElementById("registrationModal"),
     n = document.getElementById("closeModalBtn"),
     o = document.querySelector(".homeModalOverlay"),
@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (o) return;
 
+    r.textContent = "YUBORILMOQDA...";
     r.disabled = !0;
 
     const now = new Date(),

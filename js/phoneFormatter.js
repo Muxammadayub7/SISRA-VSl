@@ -374,7 +374,9 @@ function setupPhoneFormatter({
   };
 }
 
+// ... (tepadagi p, g va setupPhoneFormatter kodi o'zgarishsiz qoladi)
 document.addEventListener("DOMContentLoaded", () => {
+  // --- TELEFON FORMATTER QISMI ---
   window.phoneFormatter = setupPhoneFormatter({
     phoneInput: document.getElementById("phone"),
     selectedCountryBtn: document.getElementById("selectedCountry"),
@@ -384,7 +386,78 @@ document.addEventListener("DOMContentLoaded", () => {
     dropdownIconEl: document.getElementById("dropdownIcon"),
     errorEl: document.getElementById("phoneError"),
     defaultCode: "+998",
-    countries: p,     // must exist
-    formatMap: g,     // must exist
+    countries: p,
+    formatMap: g,
   });
+
+  // --- MODALNI BOSHQARISH QISMI ---
+  // ID o'rniga barcha 'btn' klasli tugmalarni tanlaymiz
+  const openButtons = document.querySelectorAll('.btn'); 
+  const modal = document.getElementById('registrationModal');
+  const closeBtn = document.getElementById('closeModalBtn');
+  const overlay = document.querySelector('.homeModalOverlay');
+
+  // Har bir tugma bosilganda modal ochilishi uchun tsikl (loop)
+  openButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  const closeModal = () => {
+    if (modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  };
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (overlay) overlay.addEventListener('click', closeModal);
+
+  // --- VALIDATSIYA VA YO'NALTIRISH (THANK YOU PAGE) ---
+  const form = document.getElementById('registrationForm');
+  const nameInput = document.getElementById('name');
+  const nameError = document.getElementById('nameError');
+  const phoneError = document.getElementById('phoneError');
+  const submitBtn = document.getElementById('submitBtn');
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const nameVal = nameInput.value.trim();
+      const phoneVal = document.getElementById('phone').value;
+      
+      let isValid = true;
+
+      if (nameVal.length < 2) {
+        nameError.style.display = 'block';
+        isValid = false;
+      } else {
+        nameError.style.display = 'none';
+      }
+
+      if (!window.phoneFormatter.validate(phoneVal)) {
+        phoneError.style.display = 'block';
+        isValid = false;
+      } else {
+        phoneError.style.display = 'none';
+      }
+
+      if (isValid) {
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerText = "YUKLANMOQDA...";
+        }
+        
+        setTimeout(() => {
+          window.location.href = '../thankYou.html';
+        }, 500);
+      }
+    });
+  }
 });

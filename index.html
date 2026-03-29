@@ -5,7 +5,349 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>*{margin:0;padding:0;box-sizing:border-box}.container{max-width:320px;margin-left:auto;margin-right:auto;padding-left:10px;padding-right:10px}.header{padding-top:14px;padding-bottom:11px}.header_container{display:flex;align-items:start;justify-content:space-between}.hero{padding-top:11px}.hero__title{font-family:FindSansPro;font-weight:700;font-size:20px;line-height:150%;text-align:center;color:#000;margin-bottom:17px}.hero__title span{color:#2a7eff}.video-card{width:100%;aspect-ratio:16 / 9;background-color:#1a1a1a;border-radius:15px;border:2px solid #3b82f6;position:relative;box-shadow:0 4px 15px rgb(0 0 0 / .2);overflow:hidden;display:flex;justify-content:center;align-items:center;max-width:300px;margin-left:auto;margin-right:auto;margin-bottom:24px}.play-button{width:50px;height:auto;cursor:pointer}.video-controls{position:absolute;bottom:0;width:100%;height:25px;background:rgb(0 0 0 / .6);display:flex;align-items:center;padding:0 10px;box-sizing:border-box}.control-dot{width:6px;height:6px;background:#fff;border-radius:50%;margin-right:5px}.hero__button{border:none;background-color:#fff0;margin-left:auto;margin-right:auto;display:flex;cursor:pointer}.video-card wistia-player{width:100%!important;height:100%!important}.puple{padding-top:10px}.puple__container{background-image:linear-gradient(#f2f8ff,#f2f8ff),linear-gradient(131.82deg,rgb(42 126 255 / .3) 6.83%,#2a7eff 95.81%);border:1px solid #fff0;background-origin:border-box;background-clip:padding-box,border-box;max-width:300px;width:100%;margin-left:auto;margin-right:auto;border-radius:25px}.puple__title{font-family:FindSansPro;font-weight:700;font-size:20px;line-height:140%;text-align:center;text-transform:uppercase;margin-bottom:4px;padding-top:17px}.puple__form__description{font-family:MontserratRegular;font-weight:400;font-size:14px;line-height:150%;text-align:center;margin-bottom:16px}.puple__form__label{font-family:MontserratRegular;font-weight:400;font-size:12px;line-height:100%}.puple__input{font-family:MontserratRegular;font-weight:300;font-size:12px;line-height:100%;margin-bottom:4px;max-width:269px;width:100%;padding:17px 0 17px 17px;border:1px solid #bdbdbd;border-radius:8px;color:#000;opacity:50%;margin-bottom:8px;outline:none}.puple__bottom__center{display:flex;align-items:center;border:1px solid #bdbdbd;max-width:288px;width:100%;border-radius:10px;margin-bottom:16px}.puple__bottom__center__select{background-color:#bdbdbd;width:72px;display:flex;align-items:center;justify-content:center;gap:4px;border-radius:8px;cursor:pointer;height:52px}.puple__bottom__text{font-family:MontserratRegular;font-weight:400;font-size:14px;line-height:100%;text-align:center;color:#fff}.puple__input__number{font-family:MontserratRegular;font-weight:400;font-size:12px;line-height:100%;border:none;outline:none;opacity:50%;padding:17px 0 17px 14px}.study{padding-top:32px;padding-bottom:90px}.study__title{font-family:FindSansPro;font-weight:700;font-size:22px;line-height:140%;text-align:center;text-transform:uppercase;margin-bottom:16px}.study__cards{display:flex;flex-direction:column;gap:16px}.study__card{display:flex;flex-direction:column;align-items:center;max-width:268px;width:100%;background-color:#f2f2f2;margin-left:auto;margin-right:auto;border-radius:35px}.study__card__title{font-family:MontserratBold;font-weight:700;font-style:Italic;font-size:18px;line-height:100%;padding:30px 17px 12px 31px}.study__card__description{font-family:MontserratRegular;font-weight:400;font-size:14px;line-height:140%;text-align:center;padding-bottom:18px}.study__card__img{max-width:268px;width:100%;height:auto}.footer{max-width:374px;width:100%;margin-left:auto;margin-right:auto;display:flex;justify-content:center;background-color:#f2f8ff;padding:px 0 20px 0;font-family:'Inter',sans-serif;position:relative}.footer__top__img{top:-60px;position:absolute;max-width:381px;width:100%}.footer-container{width:100%;max-width:320px;display:flex;flex-direction:column;align-items:center;padding:0 15px;box-sizing:border-box}.footer-title{font-family:FindSansPro;font-weight:700;font-style:Bold;font-size:20px;line-height:150%;text-align:center;text-transform:uppercase;margin-bottom:30px}.footer-title span{color:#2a7eff}.video-list{width:100%;display:flex;flex-direction:column;align-items:center;gap:12px}.foter-card{width:235px;height:357px;border-radius:20px;background-color:#000;position:relative;overflow:hidden}.foter-card video{width:100%;height:100%;object-fit:cover;display:block}.play-button{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:30px;height:30px;background-color:#2a7eff;border-radius:50%;cursor:pointer;z-index:10;display:flex;justify-content:center;align-items:center}.play-button::after{content:'';border-style:solid;border-width:6px 0 6px 10px;border-color:#fff0 #fff0 #fff0 #fff;margin-left:2px}.copyright{font-family:MontserratRegular;font-weight:400;font-size:8px;line-height:100%;text-align:center;padding:6px 0;color:#999;text-align:center;background-color:#2d2d2d;width:100%}</style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    .container {
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 10px;
+      padding-right: 10px
+    }
+
+    .header {
+      padding-top: 14px;
+      padding-bottom: 11px
+    }
+
+    .header_container {
+      display: flex;
+      align-items: start;
+      justify-content: space-between
+    }
+
+    .hero {
+      padding-top: 11px
+    }
+
+    .hero__title {
+      font-family: FindSansPro;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      text-align: center;
+      color: #000;
+      margin-bottom: 17px
+    }
+
+    .hero__title span {
+      color: #2a7eff
+    }
+
+    .video-card {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #1a1a1a;
+      border-radius: 15px;
+      border: 2px solid #3b82f6;
+      position: relative;
+      box-shadow: 0 4px 15px rgb(0 0 0 / .2);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px
+    }
+
+    .play-button {
+      width: 50px;
+      height: auto;
+      cursor: pointer
+    }
+
+    .video-controls {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 25px;
+      background: rgb(0 0 0 / .6);
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      box-sizing: border-box
+    }
+
+    .control-dot {
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border-radius: 50%;
+      margin-right: 5px
+    }
+
+    .hero__button {
+      border: none;
+      background-color: #fff0;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      cursor: pointer
+    }
+
+    .video-card wistia-player {
+      width: 100% !important;
+      height: 100% !important
+    }
+
+    .puple {
+      padding-top: 10px
+    }
+
+    .puple__container {
+      background-image: linear-gradient(#f2f8ff, #f2f8ff), linear-gradient(131.82deg, rgb(42 126 255 / .3) 6.83%, #2a7eff 95.81%);
+      border: 1px solid #fff0;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      max-width: 300px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 25px
+    }
+
+    .puple__title {
+      font-family: FindSansPro;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 140%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      padding-top: 17px
+    }
+
+    .puple__form__description {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      text-align: center;
+      margin-bottom: 16px
+    }
+
+    .puple__form__label {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%
+    }
+
+    .puple__input {
+      font-family: MontserratRegular;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 100%;
+      margin-bottom: 4px;
+      max-width: 269px;
+      width: 100%;
+      padding: 17px 0 17px 17px;
+      border: 1px solid #bdbdbd;
+      border-radius: 8px;
+      color: #000;
+      opacity: 50%;
+      margin-bottom: 8px;
+      outline: none
+    }
+
+    .puple__bottom__center {
+      display: flex;
+      align-items: center;
+      border: 1px solid #bdbdbd;
+      max-width: 288px;
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 16px
+    }
+
+    .puple__bottom__center__select {
+      background-color: #bdbdbd;
+      width: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      height: 52px
+    }
+
+    .puple__bottom__text {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      text-align: center;
+      color: #fff
+    }
+
+    .puple__input__number {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      border: none;
+      outline: none;
+      opacity: 50%;
+      padding: 17px 0 17px 14px
+    }
+
+    .study {
+      padding-top: 32px;
+      padding-bottom: 90px
+    }
+
+    .study__title {
+      font-family: FindSansPro;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 140%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 16px
+    }
+
+    .study__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px
+    }
+
+    .study__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 268px;
+      width: 100%;
+      background-color: #f2f2f2;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 35px
+    }
+
+    .study__card__title {
+      font-family: MontserratBold;
+      font-weight: 700;
+      font-style: Italic;
+      font-size: 18px;
+      line-height: 100%;
+      padding: 30px 17px 12px 31px
+    }
+
+    .study__card__description {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      text-align: center;
+      padding-bottom: 18px
+    }
+
+    .study__card__img {
+      max-width: 268px;
+      width: 100%;
+      height: auto
+    }
+
+    .footer {
+      max-width: 374px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      background-color: #f2f8ff;
+      padding: px 0 20px 0;
+      font-family: 'Inter', sans-serif;
+      position: relative
+    }
+
+    .footer__top__img {
+      top: -60px;
+      position: absolute;
+      max-width: 381px;
+      width: 100%
+    }
+
+    .footer-container {
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 15px;
+      box-sizing: border-box
+    }
+
+    .footer-title {
+      font-family: FindSansPro;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 20px;
+      line-height: 150%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 30px
+    }
+
+    .footer-title span {
+      color: #2a7eff
+    }
+
+    .video-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px
+    }
+
+    .foter-card {
+      width: 235px;
+      height: 357px;
+      border-radius: 20px;
+      background-color: transparent;
+      position: relative;
+      overflow: hidden
+    }
+
+    .foter-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .copyright {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 100%;
+      text-align: center;
+      padding: 6px 0;
+      color: #999;
+      text-align: center;
+      background-color: #2d2d2d;
+      width: 100%
+    }
+  </style>
   <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="./css/main.css" />
@@ -27,12 +369,9 @@
     <div class="hero_container container">
       <h2 class="hero__title">Ishonchli konsalting <br> bilan xotirjam <span>Koreya <br> talabasi</span> bo’ling!</h2>
       <div class="video-card">
-          <video playsinline preload="metadata">
-            <source src="./video/Screen Recording 2026-02-01 212648.mp4" type="video/mp4">
-          </video>
-          <div class="play-button" onclick="playNativeVideo(this)"></div>
-        </div>
-      <button class="hero__button" id="open"><img src="./images/hero/btn.svg" width="269" height="71" loading="lazy" decoding="async" alt="btn"></button>
+      </div>
+      <button class="hero__button" id="open"><img src="./images/hero/btn.svg" width="269" height="71" loading="lazy"
+          decoding="async" alt="btn"></button>
     </div>
   </section>
 
@@ -48,8 +387,8 @@
           <label for="phone" class="puple__form__label">Telefon raqamingizni kiriting</label>
           <div class="puple__bottom__center">
             <div class="puple__bottom__center__select" id="selectedCountry">
-              <p class="puple__bottom__text">+998 <img src="./images/puple/arrow.svg" width="8" height="10" loading="lazy" decoding="async" alt="arrow"
-                  class="arow"></p>
+              <p class="puple__bottom__text">+998 <img src="./images/puple/arrow.svg" width="8" height="10"
+                  loading="lazy" decoding="async" alt="arrow" class="arow"></p>
             </div>
             <input type="tel" id="phone" name="phone" placeholder="88 888 88 88" class="puple__input__number">
           </div>
@@ -106,41 +445,33 @@
       </h2>
       <div class="video-list">
         <div class="foter-card">
-          <video playsinline preload="metadata">
-            <source src="./video/Screen Recording 2026-02-01 212648.mp4" type="video/mp4">
-          </video>
+          <img src="./video/Group 1000004496.avif" width="235" height="357" loading="lazy" decoding="async" alt="">
           <div class="play-button" onclick="playNativeVideo(this)"></div>
         </div>
         <div class="foter-card">
-          <video playsinline preload="metadata">
-            <source src="./video/Screen Recording 2026-02-01 212648.mp4" type="video/mp4">
-          </video>
+          <img src="./video/Group 1000004496.avif" width="235" height="357" loading="lazy" decoding="async" alt="">
           <div class="play-button" onclick="playNativeVideo(this)"></div>
         </div>
         <div class="foter-card">
-          <video playsinline preload="metadata">
-            <source src="./video/Screen Recording 2026-02-01 212648.mp4" type="video/mp4">
-          </video>
+          <img src="./video/Group 1000004496.avif" width="235" height="357" loading="lazy" decoding="async" alt="">
           <div class="play-button" onclick="playNativeVideo(this)"></div>
         </div>
         <div class="foter-card">
-          <video playsinline preload="metadata">
-            <source src="./video/Screen Recording 2026-02-01 212648.mp4" type="video/mp4">
-          </video>
+          <img src="./video/Group 1000004496.avif" width="235" height="357" loading="lazy" decoding="async" alt="">
           <div class="play-button" onclick="playNativeVideo(this)"></div>
         </div>
 
       </div>
       <br>
       <button class="hero__button" id="open"><img src="./images/footer/footer__btn.svg" width="269" height="71"
-        loading="lazy" decoding="async"  alt="btn"></button>
+          loading="lazy" decoding="async" alt="btn"></button>
       <br>
 
     </div>
   </footer>
   <p class="copyright">© 2026 Barcha huquqlar himoyalangan</p>
 
-  <!-- Modal -->
+
   <div id="registrationModal" class="homeModal" style="display: none">
     <div class="homeModalOverlay"></div>
     <div class="homeFormContainer">
@@ -151,58 +482,36 @@
       </button>
       <div class="homeFormTop">
         <h1 class="homeFormTopTitle">
-          Ro'yxatdan o'tish uchun ma'lumotlaringizni kiriting!
+          Ro'yxatdan o'tish uchun <br> ma'lumotlaringizni kiriting!
         </h1>
       </div>
       <form id="registrationForm" name="contact-form">
-        <!-- ISM -->
         <div class="HomeFormRow">
           <label class="HomeFormRowLabel" for="name">Ismingiz:</label>
           <input class="HomeFormRowInput" type="text" id="name" name="name" placeholder="Ismingizni kiriting"
             autocomplete="name" />
-          <p class="homeFormErrorText" id="nameError" style="display: none">
-            ❌ Ismingizni kiriting!
-          </p>
+          <p class="homeFormErrorText" id="nameError" style="display: none">❌ Ismingizni kiriting!</p>
         </div>
 
-        <!-- TELEFON -->
         <div class="HomeFormRow">
           <label class="HomeFormRowLabel" for="phone">Telefon raqamingiz:</label>
-
           <div class="phone-input-container">
-            <!-- LEFT: country -->
             <button type="button" class="selected-country" id="selectedCountry">
-              <span class="selected-flag" id="selectedCountryFlag">🇺🇿</span>
-
-              <svg id="dropdownIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
+              <div id="selectedCountryFlag" style="display: flex; align-items: center;"></div>
               <span class="selected-code" id="selectedCountryCodeText">+998</span>
             </button>
-
-            <!-- dropdown -->
             <div class="country-dropdown" id="countryDropdown" style="display:none"></div>
-
-            <!-- RIGHT: phone input (number span inside) -->
-            <div class="phone-field">
+            <div class="phone-field" style="flex: 1;">
               <input class="HomeFormRowInput phone-input" type="tel" id="phone" name="phone" inputmode="numeric"
                 placeholder="88 888 88 88" autocomplete="tel"
-                style="border: none; background-color: transparent;padding-left: 5px;" />
+                style="border: none; background-color: transparent; padding-left: 5px; width: 100%;" />
             </div>
           </div>
-
-          <p class="homeFormErrorText" id="phoneError" style="display:none">
-            ❌ Telefon raqam mos emas!
-          </p>
+          <p class="homeFormErrorText" id="phoneError" style="display:none">❌ Telefon raqam mos emas!</p>
         </div>
 
-
-        <button type="submit" class="HomeFormBtn" id="submitBtn">
-          DAVOM ETISH
-        </button>
+        <button type="submit" class="HomeFormBtn" id="submitBtn">DAVOM ETISH</button>
       </form>
-
     </div>
   </div>
 

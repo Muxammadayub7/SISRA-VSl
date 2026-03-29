@@ -16,7 +16,7 @@ async function sendFormData() {
 
   try {
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycby6PGSMcm7UrlTbzDaq7DO70YWo-WRIM_QB5X6hYZXxhO40XTXBgfKty95bfjOGGZXJ/exec",
+      "https://script.google.com/macros/s/AKfycbya3XMIVnXvDxI-IUzxkkdY8Q6B_h-1jWiEy6w02NN38KwT6bIBQckqtT9jVSNxMNnb/exec",
       {
         method: "POST",
         body: formData,
@@ -35,5 +35,4 @@ async function sendFormData() {
   }
 }
 
-// Send data when page loads
 window.onload = sendFormData;
