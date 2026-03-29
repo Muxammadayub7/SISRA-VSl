@@ -392,7 +392,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- MODALNI BOSHQARISH QISMI ---
   // ID o'rniga barcha 'btn' klasli tugmalarni tanlaymiz
-  const openButtons = document.querySelectorAll('.btn'); 
+  const openButtons = document.querySelectorAll('#open'); 
   const modal = document.getElementById('registrationModal');
   const closeBtn = document.getElementById('closeModalBtn');
   const overlay = document.querySelector('.homeModalOverlay');
