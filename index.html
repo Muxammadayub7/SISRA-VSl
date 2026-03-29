@@ -210,7 +210,6 @@
     function playNativeVideo(btn) {
       const video = btn.parentElement.querySelector('video')
       if (video.paused) {
-        video.play()
         video.controls = true // Video boshlangach boshqaruv paneli chiqadi
         btn.style.display = 'none' // Ko'k tugma yashirinadi
       }
