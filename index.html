@@ -6,11 +6,394 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}.container{max-width:320px;margin-left:auto;margin-right:auto;padding-left:10px;padding-right:10px}.header{padding-top:14px;padding-bottom:11px}.header_container{display:flex;align-items:start;justify-content:space-between}.hero{padding-top:11px}.hero__title{font-family:FindSansPro;font-weight:700;font-size:20px;line-height:150%;text-align:center;color:#000;margin-bottom:17px}.hero__title span{color:#2a7eff}.video-card{width:100%;aspect-ratio:16 / 9;background-color:#1a1a1a;border-radius:15px;border:2px solid #3b82f6;position:relative;box-shadow:0 4px 15px rgb(0 0 0 / .2);overflow:hidden;display:flex;justify-content:center;align-items:center;max-width:300px;margin-left:auto;margin-right:auto;margin-bottom:24px}.play-button{width:50px;height:auto;cursor:pointer}.video-controls{position:absolute;bottom:0;width:100%;height:25px;background:rgb(0 0 0 / .6);display:flex;align-items:center;padding:0 10px;box-sizing:border-box}.control-dot{width:6px;height:6px;background:#fff;border-radius:50%;margin-right:5px}.hero__button{border:none;background-color:#fff0;margin-left:auto;margin-right:auto;display:flex;cursor:pointer}.video-card wistia-player{width:100%!important;height:100%!important}.puple{padding-top:10px}.puple__container{background-image:linear-gradient(#f2f8ff,#f2f8ff),linear-gradient(131.82deg,rgb(42 126 255 / .3) 6.83%,#2a7eff 95.81%);border:1px solid #fff0;background-origin:border-box;background-clip:padding-box,border-box;max-width:300px;width:100%;margin-left:auto;margin-right:auto;border-radius:25px}.puple__title{font-family:FindSansPro;font-weight:700;font-size:20px;line-height:140%;text-align:center;text-transform:uppercase;margin-bottom:4px;padding-top:17px}.puple__form__description{font-family:MontserratRegular;font-weight:400;font-size:14px;line-height:150%;text-align:center;margin-bottom:16px}.puple__form__label{font-family:MontserratRegular;font-weight:400;font-size:12px;line-height:100%}.puple__input{font-family:MontserratRegular;font-weight:300;font-size:12px;line-height:100%;margin-bottom:4px;max-width:269px;width:100%;padding:17px 0 17px 17px;border:1px solid #bdbdbd;border-radius:8px;color:#000;opacity:50%;margin-bottom:8px;outline:none}.puple__bottom__center{display:flex;align-items:center;border:1px solid #bdbdbd;max-width:288px;width:100%;border-radius:10px;margin-bottom:16px}.puple__bottom__center__select{background-color:#bdbdbd;width:72px;display:flex;align-items:center;justify-content:center;gap:4px;border-radius:8px;cursor:pointer;height:52px}.puple__bottom__text{font-family:MontserratRegular;font-weight:400;font-size:14px;line-height:100%;text-align:center;color:#fff}.puple__input__number{font-family:MontserratRegular;font-weight:400;font-size:12px;line-height:100%;border:none;outline:none;opacity:50%;padding:17px 0 17px 14px}.study{padding-top:32px;padding-bottom:90px}.study__title{font-family:FindSansPro;font-weight:700;font-size:22px;line-height:140%;text-align:center;text-transform:uppercase;margin-bottom:16px}.study__cards{display:flex;flex-direction:column;gap:16px}.study__card{display:flex;flex-direction:column;align-items:center;max-width:268px;width:100%;background-color:#f2f2f2;margin-left:auto;margin-right:auto;border-radius:35px}.study__card__title{font-family:MontserratBold;font-weight:700;font-style:Italic;font-size:18px;line-height:100%;padding:30px 17px 12px 31px}.study__card__description{font-family:MontserratRegular;font-weight:400;font-size:14px;line-height:140%;text-align:center;padding-bottom:18px}.study__card__img{max-width:268px;width:100%;height:auto}.footer{max-width:374px;width:100%;margin-left:auto;margin-right:auto;display:flex;justify-content:center;background-color:#f2f8ff;padding:px 0 20px 0;font-family:'Inter',sans-serif;position:relative}.footer__top__img{top:-60px;position:absolute;max-width:381px;width:100%}.footer-container{width:100%;max-width:320px;display:flex;flex-direction:column;align-items:center;padding:0 15px;box-sizing:border-box}.footer-title{font-family:FindSansPro;font-weight:700;font-style:Bold;font-size:20px;line-height:150%;text-align:center;text-transform:uppercase;margin-bottom:30px}.footer-title span{color:#2a7eff}.video-list{width:100%;display:flex;flex-direction:column;align-items:center;gap:12px}.footer-card{width:235px;height:357px;border-radius:20px;background-color:#000;position:relative;overflow:hidden;cursor:pointer;box-shadow:0 4px 12px rgb(0 0 0 / .1)}.footer-card wistia-player{position:absolute!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%) scale(1.8)!important;width:100%!important;height:100%!important}.wistia-player{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:10px;height:10px;background-color:#2a7eff;border-radius:50%;display:flex;justify-content:center;align-items:center;z-index:10;pointer-events:none;box-shadow:0 0 10px rgb(42 126 255 / .6)}.footer-cta{margin-top:25px;width:100%;background:#fbd34d;border:none;padding:15px;border-radius:50px;font-size:15px;font-weight:800;color:#000;cursor:pointer;box-shadow:0 4px 10px rgb(251 211 77 / .3);transition:0.3s}.footer-cta:hover{background:#fbbf24;transform:translateY(-2px)}.copyright{font-family:MontserratRegular;font-weight:400;font-size:8px;line-height:100%;text-align:center;padding:6px 0;color:#999;text-align:center;background-color:#2d2d2d;width:100%}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    .container {
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 10px;
+      padding-right: 10px
+    }
+
+    .header {
+      padding-top: 14px;
+      padding-bottom: 11px
+    }
+
+    .header_container {
+      display: flex;
+      align-items: start;
+      justify-content: space-between
+    }
+
+    .hero {
+      padding-top: 11px
+    }
+
+    .hero__title {
+      font-family: FindSansPro;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      text-align: center;
+      color: #000;
+      margin-bottom: 17px
+    }
+
+    .hero__title span {
+      color: #2a7eff
+    }
+
+    .video-card {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #1a1a1a;
+      border-radius: 15px;
+      border: 2px solid #3b82f6;
+      position: relative;
+      box-shadow: 0 4px 15px rgb(0 0 0 / .2);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px
+    }
+
+    .play-button {
+      width: 50px;
+      height: auto;
+      cursor: pointer
+    }
+
+    .video-controls {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 25px;
+      background: rgb(0 0 0 / .6);
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      box-sizing: border-box
+    }
+
+    .control-dot {
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border-radius: 50%;
+      margin-right: 5px
+    }
+
+    .hero__button {
+      border: none;
+      background-color: #fff0;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      cursor: pointer
+    }
+
+    .video-card wistia-player {
+      width: 100% !important;
+      height: 100% !important
+    }
+
+    .puple {
+      padding-top: 10px
+    }
+
+    .puple__container {
+      background-image: linear-gradient(#f2f8ff, #f2f8ff), linear-gradient(131.82deg, rgb(42 126 255 / .3) 6.83%, #2a7eff 95.81%);
+      border: 1px solid #fff0;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      max-width: 300px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 25px
+    }
+
+    .puple__title {
+      font-family: FindSansPro;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 140%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      padding-top: 17px
+    }
+
+    .puple__form__description {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      text-align: center;
+      margin-bottom: 16px
+    }
+
+    .puple__form__label {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%
+    }
+
+    .puple__input {
+      font-family: MontserratRegular;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 100%;
+      margin-bottom: 4px;
+      max-width: 269px;
+      width: 100%;
+      padding: 17px 0 17px 17px;
+      border: 1px solid #bdbdbd;
+      border-radius: 8px;
+      color: #000;
+      opacity: 50%;
+      margin-bottom: 8px;
+      outline: none
+    }
+
+    .puple__bottom__center {
+      display: flex;
+      align-items: center;
+      border: 1px solid #bdbdbd;
+      max-width: 288px;
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 16px
+    }
+
+    .puple__bottom__center__select {
+      background-color: #bdbdbd;
+      width: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      height: 52px
+    }
+
+    .puple__bottom__text {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      text-align: center;
+      color: #fff
+    }
+
+    .puple__input__number {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      border: none;
+      outline: none;
+      opacity: 50%;
+      padding: 17px 0 17px 14px
+    }
+
+    .study {
+      padding-top: 32px;
+      padding-bottom: 90px
+    }
+
+    .study__title {
+      font-family: FindSansPro;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 140%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 16px
+    }
+
+    .study__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px
+    }
+
+    .study__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 268px;
+      width: 100%;
+      background-color: #f2f2f2;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 35px
+    }
+
+    .study__card__title {
+      font-family: MontserratBold;
+      font-weight: 700;
+      font-style: Italic;
+      font-size: 18px;
+      line-height: 100%;
+      padding: 30px 17px 12px 31px
+    }
+
+    .study__card__description {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      text-align: center;
+      padding-bottom: 18px
+    }
+
+    .study__card__img {
+      max-width: 268px;
+      width: 100%;
+      height: auto
+    }
+
+    .footer {
+      max-width: 374px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      background-color: #f2f8ff;
+      padding: px 0 20px 0;
+      font-family: 'Inter', sans-serif;
+      position: relative
+    }
+
+    .footer__top__img {
+      top: -60px;
+      position: absolute;
+      max-width: 381px;
+      width: 100%
+    }
+
+    .footer-container {
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 15px;
+      box-sizing: border-box
+    }
+
+    .footer-title {
+      font-family: FindSansPro;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 20px;
+      line-height: 150%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 30px
+    }
+
+    .footer-title span {
+      color: #2a7eff
+    }
+
+    .video-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px
+    }
+
+    /* 1. Umumiy karta o'lchami */
+    .foter-card {
+      width: 235px;
+      height: 357px;
+      border-radius: 20px;
+      background-color: #000;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      object-fit: cover;
+    }
+
+    .foter-card wistia-player {
+      width: 100% !important;
+      height: 100% !important;
+      display: block;
+    }
+
+    .foter-card wistia-player::part(video) {
+      object-fit: cover !important;
+    }
+
+    .foter-card wistia-player::part(big-play-button) {
+      display: none !important;
+      opacity: 0 !important;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      height: 30px;
+      background-color: #2a7eff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .play-button::after {
+      content: '';
+      border-style: solid;
+      border-width: 6px 0 6px 10px;
+      border-color: transparent transparent transparent #fff;
+      margin-left: 2px;
+    }
+
+    wistia-player:not(:defined) {
+      background: center / cover no-repeat url('https://fast.wistia.com/embed/medias/ewv5wwcpxa/swatch');
+      display: block;
+      filter: blur(5px);
+    }
+
+    .copyright {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 100%;
+      text-align: center;
+      padding: 6px 0;
+      color: #999;
+      text-align: center;
+      background-color: #2d2d2d;
+      width: 100%
+    }
   </style>
   <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    <script defer src="https://fast.wistia.com/embed/medias/modhtmwue9.jsonp" async></script>
   </noscript>
 </head>
 
@@ -28,18 +411,8 @@
   <section class="hero">
     <div class="hero_container container">
       <h2 class="hero__title">Ishonchli konsalting <br> bilan xotirjam <span>Koreya <br> talabasi</span> bo’ling!</h2>
-      <div class="video-card">
-        <script src="https://fast.wistia.com/player.js" async></script>
-        <script src="https://fast.wistia.com/embed/modhtmwue9.js" async type="module"></script>
-        <style>
-          wistia-player[media-id='modhtmwue9']:not(:defined) {
-            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/modhtmwue9/swatch');
-            display: block;
-            filter: blur(5px);
-            padding-top: 133.33%;
-          }
-        </style> <wistia-player media-id="modhtmwue9" aspect="0.75"></wistia-player>
-      </div>
+      <wistia-player media-id="modhtmwue9" aspect="0.75"></wistia-player>
+      <div class="play-button"></div>
       <button class="hero__button" id="open"><img src="./images/hero/btn.svg" width="269" height="71" alt=""></button>
     </div>
   </section>
@@ -114,59 +487,28 @@
       </h2>
 
       <div class="video-list">
-        <div class="foter-card" data-wistia-id="abc1234567" onclick="loadWistia(this)">
-          <script src="https://fast.wistia.com/player.js" async></script>
-          <script src="https://fast.wistia.com/embed/ewv5wwcpxa.js" async type="module"></script>
-          <style>
-            wistia-player[media-id='ewv5wwcpxa']:not(:defined) {
-              background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ewv5wwcpxa/swatch');
-              display: block;
-              filter: blur(5px);
-              padding-top: 133.33%;
-            }
-          </style> <wistia-player media-id="ewv5wwcpxa" aspect="0.75"></wistia-player>
+        <div class="foter-card">
+          <wistia-player media-id="ewv5wwcpxa" aspect="0.75"></wistia-player>
         </div>
-        <div class="foter-card" data-wistia-id="abc1234567" onclick="loadWistia(this)">
-          <script src="https://fast.wistia.com/player.js" async></script>
-          <script src="https://fast.wistia.com/embed/ewv5wwcpxa.js" async type="module"></script>
-          <style>
-            wistia-player[media-id='ewv5wwcpxa']:not(:defined) {
-              background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ewv5wwcpxa/swatch');
-              display: block;
-              filter: blur(5px);
-              padding-top: 133.33%;
-            }
-          </style> <wistia-player media-id="ewv5wwcpxa" aspect="0.75"></wistia-player>
+
+        <div class="foter-card">
+          <wistia-player media-id="ewv5wwcpxa" aspect="0.75"></wistia-player>
         </div>
-        <div class="foter-card" data-wistia-id="abc1234567" onclick="loadWistia(this)">
-          <script src="https://fast.wistia.com/player.js" async></script>
-          <script src="https://fast.wistia.com/embed/ewv5wwcpxa.js" async type="module"></script>
-          <style>
-            wistia-player[media-id='ewv5wwcpxa']:not(:defined) {
-              background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ewv5wwcpxa/swatch');
-              display: block;
-              filter: blur(5px);
-              padding-top: 133.33%;
-            }
-          </style> <wistia-player media-id="ewv5wwcpxa" aspect="0.75"></wistia-player>
+        <div class="foter-card">
+          <wistia-player media-id="ewv5wwcpxa" aspect="0.75"></wistia-player>
         </div>
-        <div class="foter-card" data-wistia-id="abc1234567" onclick="loadWistia(this)">
-          <script src="https://fast.wistia.com/player.js" async></script>
-          <script src="https://fast.wistia.com/embed/ewv5wwcpxa.js" async type="module"></script>
-          <style>
-            wistia-player[media-id='ewv5wwcpxa']:not(:defined) {
-              background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ewv5wwcpxa/swatch');
-              display: block;
-              filter: blur(5px);
-              padding-top: 133.33%;
-            }
-          </style> <wistia-player media-id="ewv5wwcpxa" aspect="0.75"></wistia-player>
+        <div class="foter-card">
+          <wistia-player media-id="ewv5wwcpxa" aspect="0.75"></wistia-player>
         </div>
+
       </div>
+
+      <script src="https://fast.wistia.com/player.js" async></script>
+      <script src="https://fast.wistia.com/embed/ewv5wwcpxa.js" async type="module"></script>
       <br>
       <button class="hero__button" id="open"><img src="./images/footer/footer__btn.svg" width="269" height="71"
           alt=""></button>
-        <br>
+      <br>
 
     </div>
   </footer>
