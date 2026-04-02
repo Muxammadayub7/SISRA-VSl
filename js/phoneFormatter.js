@@ -466,7 +466,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         
         setTimeout(() => {
-          window.location.href = './thankYou.html';
+          // window.location.href = './thankYou.html';
         }, 500);
       }
     });
