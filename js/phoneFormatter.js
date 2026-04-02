@@ -430,7 +430,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
   if (overlay) overlay.addEventListener('click', closeModal);
 
-  // --- VALIDATSIYA VA YO'NALTIRISH (THANK YOU PAGE) ---
   const form = document.getElementById('registrationForm');
   const nameInput = document.getElementById('name');
   const nameError = document.getElementById('nameError');
@@ -467,7 +466,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         
         setTimeout(() => {
-          window.location.href = '../thankYou.html';
+          window.location.href = './thankYou.html';
         }, 500);
       }
     });

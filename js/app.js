@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function () {
   const e = document.querySelectorAll(".registerBtn"),
     t = document.getElementById("registrationModal"),
@@ -108,3 +109,26 @@ const interval = setInterval(() => {
 
   time--;
 }, 1000);
+=======
+const timerEl = document.getElementById("timer");
+
+if (timerEl) {
+  let time = 2 * 60;
+
+  const interval = setInterval(() => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+
+    timerEl.textContent =
+      String(minutes).padStart(2, "0") + ":" +
+      String(seconds).padStart(2, "0");
+
+    if (time === 0) {
+      clearInterval(interval);
+      return;
+    }
+
+    time--;
+  }, 1000);
+}
+>>>>>>> 8c8272d (add)

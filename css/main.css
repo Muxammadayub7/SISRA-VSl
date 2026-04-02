@@ -27,6 +27,7 @@
 	src: url(../fonts/Montserrat/Montserrat-Bold.woff2);
 	font-display: swap;
 }
+<<<<<<< HEAD
 @font-face {
 	font-family: Bayon;
 	src: url(../fonts/Bayon-Regular.subset.woff2);
@@ -336,6 +337,8 @@ body {
 	font-display: swap
 }
 
+=======
+>>>>>>> 8c8272d (add)
 .homeModal,
 .homeModalOverlay {
 	position: fixed;
