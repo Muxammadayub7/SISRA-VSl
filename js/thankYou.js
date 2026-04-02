@@ -14,7 +14,7 @@ async function sendFormData() {
 
   try {
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbwv8AxgyD0omZXVajkyyo0iNvTTuj0Ku_rhCf4-0OkNK0Dj7EL40XWVshdyO6cVv_Npvg/exec",
+      "https://script.google.com/macros/s/AKfycbwCN4oSbPOA9e6U_9VTnTWqf9Qzix0NFjkoUL2-ng3hZBfkhDvzfYVC1lBXUz9wq9zm7g/exec",
       {
         method: "POST",
         mode: "no-cors", // Google Script uchun juda muhim
