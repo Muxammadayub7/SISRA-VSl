@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     i = document.getElementById("phoneError"),
     r = document.getElementById("submitBtn");
 
-  const E = window.phoneFormatter; // ✅ take it from formatter.js
+  const E = window.phoneFormatter; 
 
   let p = !1,
     g = 0;

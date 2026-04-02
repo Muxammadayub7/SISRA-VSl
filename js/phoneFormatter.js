@@ -367,11 +367,23 @@ function setupPhoneFormatter({
   phoneInput.placeholder = cfg.placeholder;
   phoneInput.maxLength = cfg.maxLen;
 
-  return {
-    getCurrentCode: () => currentCode,
-    validate: (val) =>
-      getConfig(currentCode).validate.test(String(val || "").trim()),
-  };
+ return {
+  getCurrentCode: () => currentCode,
+  validate: (val) => {
+    if (!val) return false;
+
+    // Hozirgi kod va konfiguratsiyani olish
+    const cfg = getConfig(currentCode);
+
+    // Faqat raqamlarni olish
+    const digitsOnly = val.replace(/\D/g, "");
+
+    // Kutilgan raqamlar sonini hisoblash
+    const expectedDigits = cfg.maxLen - (cfg.placeholder.match(/\s/g)?.length || 0);
+
+    return digitsOnly.length === expectedDigits;
+  },
+};
 }
 
 // ... (tepadagi p, g va setupPhoneFormatter kodi o'zgarishsiz qoladi)
