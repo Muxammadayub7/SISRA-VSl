@@ -5,7 +5,529 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
- <style>*{margin:0;padding:0;box-sizing:border-box}.container{max-width:320px;margin-left:auto;margin-right:auto;padding-left:10px;padding-right:10px}.header{padding-top:14px;padding-bottom:11px}.header_container{display:flex;align-items:start;justify-content:space-between}.hero{padding-top:11px}.hero__title{font-family:FindSansPro;font-weight:700;font-size:20px;line-height:150%;text-align:center;color:#000;margin-bottom:17px}.hero__title span{color:#2a7eff}.video-card{width:100%;aspect-ratio:16 / 9;background-color:#1a1a1a;border-radius:15px;border:2px solid #3b82f6;position:relative;box-shadow:0 4px 15px rgb(0 0 0 / .2);overflow:hidden;display:flex;justify-content:center;align-items:center;max-width:300px;margin-left:auto;margin-right:auto;margin-bottom:24px}.play-button{width:50px;height:auto;cursor:pointer}.video-controls{position:absolute;bottom:0;width:100%;height:25px;background:rgb(0 0 0 / .6);display:flex;align-items:center;padding:0 10px;box-sizing:border-box}.control-dot{width:6px;height:6px;background:#fff;border-radius:50%;margin-right:5px}.hero__button{border:none;background-color:#fff0;margin-left:auto;margin-right:auto;display:flex;cursor:pointer}.video-card wistia-player{width:100%!important;height:100%!important}.puple{padding-top:10px}.puple__container{background-image:linear-gradient(#f2f8ff,#f2f8ff),linear-gradient(131.82deg,rgb(42 126 255 / .3) 6.83%,#2a7eff 95.81%);border:1px solid #fff0;background-origin:border-box;background-clip:padding-box,border-box;max-width:300px;width:100%;margin-left:auto;margin-right:auto;border-radius:25px}.puple__title{font-family:FindSansPro;font-weight:700;font-size:20px;line-height:140%;text-align:center;text-transform:uppercase;margin-bottom:4px;padding-top:17px}.puple__form__description{font-family:MontserratRegular;font-weight:400;font-size:14px;line-height:150%;text-align:center;margin-bottom:16px}.puple__form__label{font-family:MontserratRegular;font-weight:400;font-size:12px;line-height:100%}.puple__input{font-family:MontserratRegular;font-weight:300;font-size:12px;line-height:100%;margin-bottom:4px;max-width:269px;width:100%;padding:17px 0 17px 17px;border:1px solid #bdbdbd;border-radius:8px;color:#000;opacity:50%;margin-bottom:8px;outline:none}.puple__bottom__center{display:flex;align-items:center;border:1px solid #bdbdbd;max-width:288px;width:100%;border-radius:10px;margin-bottom:16px}.puple__bottom__center__select{background-color:#bdbdbd;width:72px;display:flex;align-items:center;justify-content:center;gap:4px;border-radius:8px;cursor:pointer;height:52px}.puple__bottom__text{font-family:MontserratRegular;font-weight:400;font-size:14px;line-height:100%;text-align:center;color:#fff}.puple__input__number{font-family:MontserratRegular;font-weight:400;font-size:12px;line-height:100%;border:none;outline:none;opacity:50%;padding:17px 0 17px 14px}.study{padding-top:32px;padding-bottom:90px}.study__title{font-family:FindSansPro;font-weight:700;font-size:22px;line-height:140%;text-align:center;text-transform:uppercase;margin-bottom:16px}.study__cards{display:flex;flex-direction:column;gap:16px}.study__card{display:flex;flex-direction:column;align-items:center;max-width:268px;width:100%;background-color:#f2f2f2;margin-left:auto;margin-right:auto;border-radius:35px}.study__card__title{font-family:MontserratBold;font-weight:700;font-style:Italic;font-size:18px;line-height:100%;padding:30px 17px 12px 31px}.study__card__description{font-family:MontserratRegular;font-weight:400;font-size:14px;line-height:140%;text-align:center;padding-bottom:18px}.study__card__img{max-width:268px;width:100%;height:auto}.footer{max-width:374px;width:100%;margin-left:auto;margin-right:auto;display:flex;justify-content:center;background-color:#f2f8ff;padding:px 0 20px 0;font-family:'Inter',sans-serif;position:relative}.footer__top__img{top:-60px;position:absolute;max-width:381px;width:100%}.footer-container{width:100%;max-width:320px;display:flex;flex-direction:column;align-items:center;padding:0 15px;box-sizing:border-box}.footer-title{font-family:FindSansPro;font-weight:700;font-style:Bold;font-size:20px;line-height:150%;text-align:center;text-transform:uppercase;margin-bottom:30px}.footer-title span{color:#2a7eff}.video-list{width:100%;display:flex;flex-direction:column;align-items:center;gap:12px}.foter-card{width:235px;height:357px;border-radius:20px;background-color:#fff0;position:relative;overflow:hidden}.foter-card video{width:100%;height:100%;object-fit:cover;display:block}.copyright{font-family:MontserratRegular;font-weight:400;font-size:8px;line-height:100%;text-align:center;padding:6px 0;color:#999;text-align:center;background-color:#2d2d2d;width:100%}</style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    .container {
+      max-width: 375px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 10px;
+      padding-right: 10px
+    }
+
+    .header {
+      padding-top: 14px;
+      padding-bottom: 11px
+    }
+
+    .header_container {
+      display: flex;
+      align-items: start;
+      justify-content: space-between
+    }
+
+    .hero {
+      padding-top: 11px;
+    }
+
+    .hero__title {
+      font-family: BarlowExtrabold;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 32px;
+      text-align: center;
+      color: #000;
+      margin-bottom: 17px
+    }
+
+    .hero__title span {
+      color: #C30D1A
+    }
+
+    .video-card {
+      max-width: 355px;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #1a1a1a;
+      border-radius: 15px;
+      position: relative;
+      box-shadow: 0 4px 15px rgb(0 0 0 / .2);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px
+    }
+
+    .play-button {
+      width: 50px;
+      height: auto;
+      cursor: pointer
+    }
+
+    .video-controls {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 25px;
+      background: rgb(0 0 0 / .6);
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      box-sizing: border-box
+    }
+
+    .control-dot {
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border-radius: 50%;
+      margin-right: 5px
+    }
+
+    .hero__button {
+      border: none;
+      background-color: #fff0;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      cursor: pointer;
+      max-width: 269px;
+      width: 100%;
+    }
+
+    .video-card wistia-player {
+      width: 100% !important;
+      height: 100% !important
+    }
+
+    .new {
+      padding-top: 34px;
+      padding-bottom: 0px;
+    }
+
+    .new__title {
+      font-family: BarlowExtrabold;
+      font-weight: 800;
+      font-size: 28px;
+      line-height: 140%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .new__title span {
+      color: #C30D1A;
+    }
+
+    .new__inner {
+      max-width: 355px;
+      width: 100%;
+      background-color: #F2F8FF;
+      padding: 20px 16px;
+      border-radius: 25px;
+      margin-bottom: 16px;
+    }
+
+    .inner__title {
+      font-family: Barlowbold;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 100%;
+      text-align: center;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .new__arrow {
+      position: absolute;
+      right: -25px;
+      top: 50px;
+    }
+
+    .new__wrapper {
+      max-width: 158px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      position: relative;
+    }
+
+    .red__text {
+      font-family: Barlowbold;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      color: #AC111C;
+      margin-bottom: 4px;
+    }
+
+    .blue__text {
+      font-family: Barlowbold;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      color: #2a7eff;
+      margin-bottom: 4px;
+    }
+
+    .row__text {
+      font-family: BarlowRegular;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 130%;
+      text-align: center;
+      color: #000000;
+    }
+
+    .puple {
+      padding-top: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .puple__container {
+      background-image: linear-gradient(#f2f8ff, #f2f8ff), linear-gradient(131.82deg, rgb(42 126 255 / .3) 6.83%, #2a7eff 95.81%);
+      border: 1px solid #fff0;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      max-width: 375px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 25px
+    }
+
+    .puple__title {
+      font-family: BarlowExtrabold;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 130%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      padding-top: 17px
+    }
+
+    .puple__title span {
+      color: #C30D1A;
+    }
+
+    .puple__form__description {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      text-align: center;
+      margin-bottom: 16px
+    }
+
+    .puple__form {
+      padding: 20px 20px;
+    }
+
+    .puple__form__label {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      margin-bottom: 12px;
+    }
+
+    .puple__input {
+      font-family: MontserratRegular;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 100%;
+      margin-bottom: 4px;
+      max-width: 269px;
+      width: 100%;
+      padding: 17px 0 17px 17px;
+      border: 1px solid #bdbdbd;
+      border-radius: 8px;
+      color: #000;
+      opacity: 50%;
+      margin-bottom: 8px;
+      outline: none;
+      max-width: 323px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .puple__bottom__center {
+      display: flex;
+      align-items: center;
+      border: 1px solid #bdbdbd;
+      max-width: 323px;
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .puple__bottom__center__select {
+      background-color: #bdbdbd;
+      width: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      height: 52px
+    }
+
+    .puple__bottom__text {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      text-align: center;
+      color: #fff
+    }
+
+    .puple__input__number {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      border: none;
+      outline: none;
+      opacity: 50%;
+      padding: 17px 0 17px 14px
+    }
+
+    .puple__select {
+      appearance: none;
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 16px;
+      cursor: pointer;
+      padding-right: 40px;
+      background-color: white;
+    }
+
+    .puple__select__wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .puple__input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    /* Ikonkani input ichiga joylash */
+    .puple__input__icon-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .puple__icon {
+      position: absolute;
+      left: 16px;
+      color: #007bff;
+      font-size: 18px;
+    }
+
+    .puple__input__icon-wrapper .puple__input {
+      padding-left: 45px;
+    }
+
+    .puple__select {
+      cursor: pointer;
+      background-color: white;
+    }
+
+    .puple__select option {
+      padding: 10px;
+      background: #fff;
+      color: #333;
+    }
+
+    .study {
+      padding-top: 32px;
+      padding-bottom: 90px
+    }
+
+    .study__title {
+      font-family: BarlowExtrabold;
+      font-size: 28px;
+      line-height: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 16px
+    }
+
+    .study__title span {
+      color: #C30D1A;
+    }
+
+    .study__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px
+    }
+
+    .study__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 268px;
+      width: 100%;
+      background-color: #f2f2f2;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 35px
+    }
+
+    .study__card__title {
+      font-family: MontserratBold;
+      font-weight: 700;
+      font-style: Italic;
+      font-size: 18px;
+      line-height: 100%;
+      padding: 30px 17px 12px 31px
+    }
+
+    .study__card__description {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      text-align: center;
+      padding-bottom: 18px
+    }
+
+    .study__card__img {
+      max-width: 268px;
+      width: 100%;
+      height: auto;
+      border-radius: 35px;
+    }
+
+    .footer {
+      max-width: 374px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      background-color: #f2f8ff;
+      padding: px 0 20px 0;
+      font-family: 'Inter', sans-serif;
+      position: relative
+    }
+
+    .footer__top__img {
+      top: -60px;
+      position: absolute;
+      max-width: 381px;
+      width: 100%
+    }
+
+    .footer-container {
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 15px;
+      box-sizing: border-box
+    }
+
+    .footer-title {
+      font-family: BarlowExtrabold;
+      font-size: 24px;
+      line-height: 120%;
+      text-align: center;
+      text-transform: uppercase;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 30px
+    }
+
+    .footer-title span {
+      color: #2a7eff
+    }
+
+    .video-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px
+    }
+
+    .foter-card {
+      width: 235px;
+      height: 357px;
+      border-radius: 20px;
+      background-color: #fff0;
+      position: relative;
+      overflow: hidden
+    }
+
+    .foter-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .copyright {
+      font-family: MontserratRegular;
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 100%;
+      text-align: center;
+      padding: 6px 0;
+      color: #999;
+      text-align: center;
+      background-color: #2d2d2d;
+      width: 100%
+    }
+
+    .study__bottom {
+      font-family: BarlowExtrabold;
+      font-size: 28px;
+      line-height: 130%;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
+      text-align: center;
+    }
+
+    .study__video {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 323px;
+      width: 100%;
+    }
+
+    .study__img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  </style>
   <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="./css/main.css" />
@@ -25,41 +547,134 @@
 
   <section class="hero">
     <div class="hero_container container">
-      <h2 class="hero__title">Ishonchli konsalting <br> bilan xotirjam <span>Koreya <br> talabasi</span> bo’ling!</h2>
-      <div class="video-card">
-      </div>
-      <button class="hero__button" id="open"><img src="./images/hero/btn_1.avif" width="269" height="71" loading="lazy"
+      <h2 class="hero__title">1% LIK NUFUZLI <br> <span>JOONGBU UNIVERSITETI</span> <br> TALABASI BO'LING!</h2>
+      <img src="./images/hero/Rectangle 240648460.avif" class="video-card" width="355" height="206" fetchpriority="high"
+        decoding="async" alt="">
+      <button class="hero__button" id="open"><img src="./images/hero/btn__1.avif" width="269" height="71" loading="lazy"
           decoding="async" alt="btn"></button> <br> <br>
     </div>
   </section>
 
   <section class="puple">
     <div class="puple__container container">
-      <h2 class="puple__title">Koreya talabasi <br>
-        bo’lish. Ilk qadam!</h2>
+      <h2 class="puple__title">JOONGBU talabasi <br> bo’lish - <span>birinchi qadam</span></h2>
       <p class="puple__form__description">Siz bilan bog’lanishimiz uchun <br> iltimos, Ro’yxatdan o’ting</p>
       <form action="" class="puple__form">
-        <label for="name" class="puple__form__label">Ismingizni kiriting</label> <br>
-        <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" class="puple__input">
+        <label for="userName" class="puple__form__label">Ismingizni kiriting</label>
+        <input type="text" id="userName" name="name" placeholder="Ismingizni kiriting" class="puple__input"
+          autocomplete="name">
+        <label for="userAge" class="puple__form__label">Yoshingizni kiriting</label>
+        <input type="number" id="userAge" name="age" placeholder="Yoshingizni kiriting" class="puple__input">
+        <label for="langLevel" class="puple__form__label">Til darajangizni tanlang</label>
+        <div class="puple__select__wrapper">
+          <select id="langLevel" name="language_level" class="puple__input puple__select">
+            <option value="" disabled selected>Til darajangizni kiriting...</option>
+            <option value="topik3">TOPIK 3</option>
+            <option value="ielts5.5">IELTS 5,5</option>
+            <option value="toefl71">TOEFL 71</option>
+          </select>
+        </div>
+
+        <label for="program" class="puple__form__label">Qaysi o'quv dasturiga ketmoqchisiz:</label>
+        <div class="puple__select__wrapper">
+          <select id="program" name="program" class="puple__input puple__select">
+            <option value="" disabled selected>Tanlang...</option>
+            <option value="language_course">Til kursi</option>
+            <option value="bachelor">Bakalavr</option>
+            <option value="master">Magistratura</option>
+            <option value="phd">Doktorantura</option>
+          </select>
+        </div>
+
         <div class="puple__bottom">
           <label for="phone" class="puple__form__label">Telefon raqamingizni kiriting</label>
           <div class="puple__bottom__center">
             <div class="puple__bottom__center__select" id="selectedCountry">
-              <p class="puple__bottom__text">+998 <img src="./images/puple/arrow.svg" width="8" height="10"
-                  loading="lazy" decoding="async" alt="arrow" class="arow"></p>
+              <p class="puple__bottom__text">+998
+                <img src="./images/puple/arrow.svg" width="8" height="10" loading="lazy" alt="arrow" class="arow">
             </div>
-            <input type="tel" id="phone" name="phone" placeholder="88 888 88 88" class="puple__input__number">
+            <input type="tel" id="phone" name="phone" placeholder="88 888 88 88" class="puple__input__number"
+              autocomplete="tel">
           </div>
         </div>
-        <button class="hero__button" id="open" type="button"><img src="./images/puple/puple__btn__1.avif" width="269"
-            height="71" loading="lazy" decoding="async" alt=""></button>
+
+        <button class="hero__button" id="open" type="submit">
+          <img src="./images/puple/puple__btn.avif" width="269" height="71" loading="lazy" alt="Yuborish">
+        </button>
       </form>
+    </div>
+  </section>
+
+  <section class="new">
+    <div class="new__container container">
+      <h2 class="new__title">JOONGBU universiteti <br>
+        <span>bitiruvchilari</span> - hozir
+      </h2>
+      <div class="new__inner">
+        <h3 class="inner__title">Javlon Asadullayev</h3>
+        <div class="new__wrapper">
+          <div class="new__wrapper__row">
+            <img src="./images/new/new__row.svg" width="148" height="170" loading="lazy" decoding="async" alt="row"
+              class="new__row__img">
+            <h3 class="red__text">A nuqtasi:</h3>
+            <p class="row__text">18 yoshida Joungbu <br> universiteti talabasi bo’ldi</p>
+          </div>
+          <img src="./images/new/new__arrow.svg" width="40" height="40" loading="lazy" decoding="async" alt="arrow"
+            class="new__arrow">
+          <div class="new__wrapper__row">
+            <img src="./images/new/new__row.svg" width="148" height="170" loading="lazy" decoding="async" alt="row"
+              class="new__row__img">
+            <h3 class="blue__text">b nuqtasi:</h3>
+            <p class="row__text">Hozirda YUKSALISH <br> maktabida Direktor</p>
+          </div>
+        </div>
+      </div>
+      <div class="new__inner">
+        <h3 class="inner__title">Javlon Asadullayev</h3>
+        <div class="new__wrapper">
+          <div class="new__wrapper__row">
+            <img src="./images/new/new__row.svg" width="148" height="170" loading="lazy" decoding="async" alt="row"
+              class="new__row__img">
+            <h3 class="red__text">A nuqtasi:</h3>
+            <p class="row__text">18 yoshida Joungbu <br> universiteti talabasi bo’ldi</p>
+          </div>
+          <img src="./images/new/new__arrow.svg" width="40" height="40" loading="lazy" decoding="async" alt="arrow"
+            class="new__arrow">
+          <div class="new__wrapper__row">
+            <img src="./images/new/new__row.svg" width="148" height="170" loading="lazy" decoding="async" alt="row"
+              class="new__row__img">
+            <h3 class="blue__text">b nuqtasi:</h3>
+            <p class="row__text">Hozirda YUKSALISH <br> maktabida Direktor</p>
+          </div>
+        </div>
+      </div>
+      <div class="new__inner">
+        <h3 class="inner__title">Javlon Asadullayev</h3>
+        <div class="new__wrapper">
+          <div class="new__wrapper__row">
+            <img src="./images/new/new__row.svg" width="148" height="170" loading="lazy" decoding="async" alt="row"
+              class="new__row__img">
+            <h3 class="red__text">A nuqtasi:</h3>
+            <p class="row__text">18 yoshida Joungbu <br> universiteti talabasi bo’ldi</p>
+          </div>
+          <img src="./images/new/new__arrow.svg" width="40" height="40" loading="lazy" decoding="async" alt="arrow"
+            class="new__arrow">
+          <div class="new__wrapper__row">
+            <img src="./images/new/new__row.svg" width="148" height="170" loading="lazy" decoding="async" alt="row"
+              class="new__row__img">
+            <h3 class="blue__text">b nuqtasi:</h3>
+            <p class="row__text">Hozirda YUKSALISH <br> maktabida Direktor</p>
+          </div>
+        </div>
+      </div>
+      <button class="hero__button" id="open" type="button"><img src="./images/new/new__btn.avif" width="269" height="71"
+          loading="lazy" decoding="async" alt=""></button>
     </div>
   </section>
 
   <section class="study">
     <div class="study__container container">
-      <h2 class="study__title">Nega joungbu universiteti?</h2>
+      <h2 class="study__title">Nima uchun <span>JOONGBU?</span></h2>
       <div class="study__cards">
         <div class="study__card">
           <h3 class="study__card__title">Xalqaro imkoniyatlar</h3>
@@ -89,6 +704,12 @@
           <img src="./images/study/card__img__4.avif" alt="card_4" width="300" height="209" loading="lazy"
             decoding="async" class="study__card__img">
         </div>
+        <h2 class="study__bottom">5 daqiqada universitet <br>
+          binosi bilan tanishing</h2>
+        <img src="./images/study/Group 2089345180.svg" width="323" height="162" loading="lazy" alt="study__img"
+          class="study__video">
+        <img src="./images/hero/btn__1.avif" width="318" height="77" loading="lazy" decoding="async" alt="img"
+          class="study__img">
       </div>
   </section>
 
@@ -97,38 +718,39 @@
       <img src="./images/footer/gooter_top.svg" width="381" height="61" loading="lazy" decoding="async" alt="top__img"
         class="footer__top__img">
       <h2 class="footer-title">
-        BIZ BILAN <span>KOREYA</span><br>
-        <span>TALABASI</span> BO'LGAN<br>
-        YOSHLAR FIKRI
+        Sisra consulting bilan <br> <span>JOONGBU talabasi</span> <br> bo’lgan yoshlar fikri
       </h2>
       <div class="video-list">
         <div class="foter-card">
-          <img src="./video/Group 1000004496.avif" width="235" height="357" loading="lazy" decoding="async" alt="Video 1">
+          <img src="./video/Group 1000004496.avif" width="235" height="357" loading="lazy" decoding="async"
+            alt="Video 1">
           <div class="play-button" onclick="playNativeVideo(this)"></div>
         </div>
         <div class="foter-card">
-          <img src="./video/Group 1000004496.avif" width="235" height="357" loading="lazy" decoding="async" alt="Video 2">
+          <img src="./video/Group 1000004496.avif" width="235" height="357" loading="lazy" decoding="async"
+            alt="Video 2">
           <div class="play-button" onclick="playNativeVideo(this)"></div>
         </div>
         <div class="foter-card">
-          <img src="./video/Group 1000004496.avif" width="235" height="357" loading="lazy" decoding="async" alt="Video 3">
+          <img src="./video/Group 1000004496.avif" width="235" height="357" loading="lazy" decoding="async"
+            alt="Video 3">
           <div class="play-button" onclick="playNativeVideo(this)"></div>
         </div>
         <div class="foter-card">
-          <img src="./video/Group 1000004496.avif" width="235" height="357" loading="lazy" decoding="async" alt="Video 4">
+          <img src="./video/Group 1000004496.avif" width="235" height="357" loading="lazy" decoding="async"
+            alt="Video 4">
           <div class="play-button" onclick="playNativeVideo(this)"></div>
         </div>
 
       </div>
       <br>
-      <button class="hero__button" id="open"><img src="./images/footer/footer__btn__1.avif" width="269" height="71"
+      <button class="hero__button" id="open"><img src="./images/footer/footer__btn.avif" width="269" height="71"
           loading="lazy" decoding="async" alt="btn"></button>
       <br>
 
     </div>
   </footer>
   <p class="copyright">© 2026 Barcha huquqlar himoyalangan</p>
-
 
   <div id="registrationModal" class="homeModal" style="display: none">
     <div class="homeModalOverlay"></div>
