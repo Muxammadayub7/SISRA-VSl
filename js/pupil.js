@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz2vLZdTmwnWtntEkI_4DdL-eTS5LFzjdFRRD42RXLO1Hr9sFOL3Me5xjfvd_TTaaC4bg/exec"; 
 
-  // --- 1. TELEFON FORMATLASH ---
   const phoneInput = document.getElementById("mainPhone");
+  const form = document.querySelector(".puple__form");
+
+  // 1. TELEFON FORMATLASH
   if (phoneInput) {
     phoneInput.addEventListener("input", (e) => {
       let val = e.target.value.replace(/\D/g, ""); 
+      e.target.classList.remove("error-border"); // Yozishni boshlaganda qizilni yo'qotish
       let matrix = "88 888 88 88";
       let i = 0;
       let newValue = matrix.replace(/[_\d]/g, (a) => {
@@ -15,57 +18,85 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- 2. LEAD YUBORISH VA TEZKOR REDIRECT ---
-  const form = document.querySelector(".puple__form");
+  // 2. FORMANI TEKSHIRISH VA YUBORISH
   if (form) {
-    form.addEventListener("submit", (e) => { // Bu yerda async olib tashlandi, chunki biz kutmaymiz
+    form.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      const submitBtn = form.querySelector('button[type="submit"]');
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.innerText = "YUBORILDI!"; // Foydalanuvchiga vizual effekt
-      }
-
-      // Ma'lumotlarni yig'ish
-      const formData = {
-        Ism: document.getElementById("userName").value.trim(),
-        Yoshi: document.getElementById("userAge").value.trim(),
-        Til: document.getElementById("langLevel").value,
-        Dastur: document.getElementById("program").value,
-        Telefon: "+998 " + phoneInput.value,
-        Vaqt: new Date().toLocaleString()
+      // Barcha inputlarni yig'amiz
+      const inputs = {
+        name: document.getElementById("userName"),
+        age: document.getElementById("userAge"),
+        lang: document.getElementById("langLevel"),
+        prog: document.getElementById("program"),
+        phone: document.getElementById("mainPhone")
       };
 
-      if (!formData.Ism || phoneInput.value.replace(/\D/g, "").length !== 9) {
-        alert("Iltimos, ma'lumotlarni to'liq kiriting!");
-        if (submitBtn) submitBtn.disabled = false;
-        return;
-      }
+      let isAllValid = true;
 
-      const params = new URLSearchParams();
-      params.append("Ism", formData.Ism);
-      params.append("Telefon", formData.Telefon);
-      params.append("Yoshi", formData.Yoshi);
-      params.append("Til", formData.Til);
-      params.append("Dastur", formData.Dastur);
-      params.append("Vaqt", formData.Vaqt);
-
-      // --- ASOSIY QISMI: YUBORISH VA 0.5 SEKUNDDAN KEGIN O'TISH ---
-      
-      // 1. So'rovni orqa fonda yuboramiz (kutib o'tirmaymiz)
-      fetch(SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors", 
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: params.toString()
+      // Xatolarni tozalash (har safar submit bo'lganda)
+      Object.values(inputs).forEach(input => {
+        if (input) input.classList.remove("error-border");
       });
 
-      // 2. Majburiy 0.5 soniyalik pauza va redirect
-      setTimeout(() => {
-        window.location.href = "./thankYou.html";
-      }, 500); // 500ms = 0.5 sekund
-      
+      // --- VALIDATSIYA BOSQICHI ---
+      // 1. Ismni tekshirish
+      if (inputs.name.value.trim().length < 2) {
+        inputs.name.classList.add("error-border");
+        isAllValid = false;
+      }
+      // 2. Yoshni tekshirish
+      if (!inputs.age.value) {
+        inputs.age.classList.add("error-border");
+        isAllValid = false;
+      }
+      // 3. Selectlarni tekshirish
+      if (!inputs.lang.value) {
+        inputs.lang.classList.add("error-border");
+        isAllValid = false;
+      }
+      if (!inputs.prog.value) {
+        inputs.prog.classList.add("error-border");
+        isAllValid = false;
+      }
+      // 4. Telefonni tekshirish (9 ta raqam bo'lishi shart)
+      if (inputs.phone.value.replace(/\D/g, "").length !== 9) {
+        inputs.phone.classList.add("error-border");
+        isAllValid = false;
+      }
+
+      // AGAR HAMMASI TO'G'RI BO'LSA
+      if (isAllValid) {
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerText = "YUBORILDI!";
+        }
+
+        const params = new URLSearchParams();
+        params.append("Ism", inputs.name.value);
+        params.append("Telefon", "+998 " + inputs.phone.value);
+        params.append("Yoshi", inputs.age.value);
+        params.append("Til", inputs.lang.value);
+        params.append("Dastur", inputs.prog.value);
+        params.append("Vaqt", new Date().toLocaleString());
+
+        // Ma'lumotni yuborish (orqa fonda)
+        fetch(SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors", 
+          body: params.toString()
+        });
+
+        // 0.5 sekunddan keyin o'tkazish
+        setTimeout(() => {
+          window.location.href = "./thankYou.html";
+        }, 500);
+      } else {
+        // Xato bo'lsa tepaga birinchi xatoga skroll qilish (ixtiyoriy)
+        const firstError = document.querySelector(".error-border");
+        if (firstError) firstError.focus();
+      }
     });
   }
 });
